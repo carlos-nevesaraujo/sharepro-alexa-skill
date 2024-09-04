@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="./style/bootstrap.css" rel="stylesheet">
+</head>
+<body style="background-color: #eeeeee;">
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card" style="padding: 2.25rem;padding-bottom: 3rem;">
+                    <div class="card-body">
+                      <div class="text-center " style="margin-bottom: 35px;">
+                        <img class="img-responsive" style="width: 65%; min-width: 50%;" src="./img/logo-shp.png">
+                        <p>Alexa + Timesheet</p>
+                      </div>
+                     
+                      <form id="loginForm" onsubmit="return validateForm()">
+                        <div class="form-group">
+                                <label for="username">E-MAIL</label>
+                                <input type="text" id="email" name="email" class="form-control" required>
+
+                              </div>
+                            <div class="form-group">
+                                <label for="password">SENHA</label>
+                                <input type="password" id="senha" name="senha" class="form-control" required>
+                              </div>
+                            <button type="submit" class="btn btn-primary btn-block" style="background-color: #186db5;" >ENTRAR</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="./script/jquery.js"></script>
+    <script src="./script/bootstrap.js"></script>
+    <script src="./script/login.js"></script>
+</body>
+</html>
