@@ -5,16 +5,22 @@ function validateForm() {
     $(".form-control").removeClass("is-invalid");
 
     var email = $("#email").val();
-    var password = $("#senha").val();
 
     // Basic validation checks
-    if (!email || !password) {
+    if (!email) {
         isValid = false;
     }
+
+    if(email.indexOf("sharepro") < 0)
+    {
+        isValid = false;
+        alert("Acesso negado!")
+    }
+
   
     if (isValid) {
         // Simulate authentication and generate an access token (in real use, you'd authenticate and obtain a token)
-        var accessToken = "dummy_access_token"; // Replace this with actual token
+        var accessToken = email; // Replace this with actual token
 
         // Redirect to Alexa's redirect URL with the access token
         var redirectUri = "https://pitangui.amazon.com/spa/skill/account-linking-status.html?vendorId=MNMBMHN0IMTVR";
@@ -23,3 +29,4 @@ function validateForm() {
 
     return false; // Prevent form submission to allow redirection
 }
+
